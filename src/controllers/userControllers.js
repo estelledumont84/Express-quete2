@@ -1,9 +1,3 @@
-
-
-
-
-
-
 const database = require("../../database");
 
 const getUsers = (req, res) => {
@@ -88,7 +82,7 @@ const updateUser = (req, res) => {
     )
     .then(([result]) => {
       if (result.affectedRows === 0) {
-        res.sendStatus(404);
+        res.sendStatus(422);
       } else {
         res.sendStatus(204);
       }

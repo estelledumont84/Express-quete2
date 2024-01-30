@@ -3,9 +3,6 @@ const request = require("supertest");
 const app = require("../src/app");
 
 
-const database = require("../database")
-
-afterAll(() => database.end());
 
 
 describe("GET /api/movies", () => {
@@ -33,4 +30,3 @@ describe("GET /api/movies/:id", () => {
     expect(response.status).toEqual(404);
   });
 });
-
