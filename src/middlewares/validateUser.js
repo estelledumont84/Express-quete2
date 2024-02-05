@@ -1,23 +1,23 @@
 const validateUsers = (req, res, next) => {
-  const { firstname, lastname, email, city, language } = req.body;
+  const { firstname, lastname, email, city, language, hashedPassword } = req.body;
   const errors = [];
 
-  if (title == null) {
+  if (firstname == null) {
     errors.push({ field: "firstname", message: "This field is required" });
   }
-  if (director == null) {
+  if (lastname== null) {
     errors.push({ field: "lastname", message: "This field is required" });
   }
-  if (year == null) {
+  if (email == null) {
     errors.push({ field: "email", message: "This field is required" });
   }
-  if (color == null) {
+  if (city == null) {
     errors.push({ field: "city", message: "This field is required" });
   }
-  if (duration == null) {
+  if (language == null) {
     errors.push({ field: "language", message: "This field is required" });
   }
- 
+  
   if (errors.length) {
     res.status(422).json({ validationErrors: errors });
   } else {
