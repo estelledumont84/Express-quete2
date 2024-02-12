@@ -1,5 +1,5 @@
 const validateUsers = (req, res, next) => {
-  const { firstname, lastname, email, city, language, hashedPassword } = req.body;
+  const { firstname, lastname, email, city, language,  } = req.body;
   const errors = [];
 
   if (firstname == null) {
